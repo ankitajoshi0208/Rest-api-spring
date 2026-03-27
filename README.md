@@ -100,6 +100,22 @@ You can test APIs using **Postman**.
 * Swagger API documentation
 * Authentication (JWT)
 
+## Screenshots
+
+<img width="896" height="715" alt="image" src="https://github.com/user-attachments/assets/fbed7da7-35d1-474e-812e-a59aa887dd01" />
+<img width="913" height="711" alt="image" src="https://github.com/user-attachments/assets/9cf1a551-9829-495c-9f38-cf1a9059efe2" />
+<img width="905" height="702" alt="image" src="https://github.com/user-attachments/assets/5ef7219f-d41f-499d-8572-96dcad50e64a" />
+<img width="896" height="697" alt="image" src="https://github.com/user-attachments/assets/46c232f6-383b-43d0-ad95-7e916e0ee4b5" />
+<img width="898" height="683" alt="image" src="https://github.com/user-attachments/assets/662edbc4-af20-4b8a-a0f8-7f25b1293ca7" />
+<img width="1362" height="580" alt="image" src="https://github.com/user-attachments/assets/b7f17e27-1e7d-4e11-9d50-99c40f1516c5" />
+
+
+
+
+
+
+
+
 ---
 
 ## 👩‍💻 Author
