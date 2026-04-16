@@ -1,42 +1,44 @@
-package com.example.eg.controller;
+    package com.example.eg.controller;
 
-import java.util.List;
+    import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.web.bind.annotation.*;
 
-import com.example.eg.model.Student;
-import com.example.eg.service.StudentService;
+    import com.example.eg.model.Student;
+    import com.example.eg.service.StudentService;
 
-@RestController
-@RequestMapping("/api/students")
-public class StudentController {
+    @CrossOrigin(origins = "http://localhost:5173")
 
-    @Autowired
-    private StudentService service;
+    @RestController
+    @RequestMapping("/api/students")
+    public class StudentController {
 
-    @GetMapping
-    public List<Student> getStudents() {
-        return service.getAllStudents();
+        @Autowired
+        private StudentService service;
+
+        @GetMapping
+        public List<Student> getStudents() {
+            return service.getAllStudents();
+        }
+
+        @GetMapping("/{id}")
+        public Student getStudentById(@PathVariable int id) {
+            return service.getStudentById(id);
+        }
+
+        @PostMapping
+        public Student addStudent(@RequestBody Student student) {
+            return service.saveStudent(student);
+        }
+        @PutMapping("/{id}")
+        public Student updateStudent(@PathVariable int id, @RequestBody Student student) {
+            return service.updateStudent(id, student);
+        }
+
+        @DeleteMapping("/{id}")
+        public String deleteStudent(@PathVariable int id) {
+            service.deleteStudent(id);
+            return "Student deleted successfully";
+        }
     }
-
-    @GetMapping("/{id}")
-    public Student getStudentById(@PathVariable int id) {
-        return service.getStudentById(id);
-    }
-
-    @PostMapping
-    public Student addStudent(@RequestBody Student student) {
-        return service.saveStudent(student);
-    }
-    @PutMapping("/{id}")
-    public Student updateStudent(@PathVariable int id, @RequestBody Student student) {
-        return service.updateStudent(id, student);
-    }
-
-    @DeleteMapping("/{id}")
-    public String deleteStudent(@PathVariable int id) {
-        service.deleteStudent(id);
-        return "Student deleted successfully";
-    }
-}
